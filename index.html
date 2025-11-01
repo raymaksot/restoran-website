@@ -1,160 +1,109 @@
 <!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ресторан Казахской Кухни</title>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Kazakh Taste - Authentic Kazakh Cuisine</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#da3f0b",
-                        "background-light": "#f8f6f5",
-                        "background-dark": "#221410",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24
-        }
-    </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display text-stone-800 dark:text-stone-200">
-<div class="relative w-full overflow-x-hidden">
-<!-- Top Navigation Bar -->
-<header class="sticky top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm shadow-sm">
-<div class="container mx-auto px-4">
-<div class="flex items-center justify-between h-16">
-<div class="flex items-center gap-4 text-primary">
-<div class="size-6 text-[#181311] dark:text-[#f8f6f5]">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-<h2 class="text-[#181311] dark:text-[#f8f6f5] text-lg font-bold tracking-tight">Kazakh Taste</h2>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-[#181311] dark:text-[#f8f6f5] text-sm font-medium hover:text-primary transition-colors" href="#menu">Menu</a>
-<a class="text-[#181311] dark:text-[#f8f6f5] text-sm font-medium hover:text-primary transition-colors" href="#about">About Us</a>
-<a class="text-[#181311] dark:text-[#f8f6f5] text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
-</nav>
-</div>
-</div>
-</header>
-<main>
-<!-- Hero Section -->
-<section class="relative">
-<div class="container mx-auto px-4 py-16 sm:py-24 lg:py-32">
-<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4 text-center" data-alt="A festive table laden with various Kazakh dishes like beshbarmak and kazy." style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbfslEuUTmN5w0SMxuWOLHtTkoR6tMkg9J1VIzeIT3wudgZx4tPgXvC4Mx4u1JiseQbivPTQV8ubBNKtCGh2msk3mlHDJD9Gh6FlKoZgysPimo9tmSskfOtqNtbKm_yoBfxQeq3N6wQfLW3l9c6vO7DyF16tdxTs_5bqgragcCFAmIds3OgmoKcaljKpOifoXAnTA9xomzV0y_ZWeJDXBlTVNCLCpMZgedH1X9X6IPvSFh2iKdF05nqfdzab5ZpV5erDhZquNPRFo");'>
-<div class="flex flex-col gap-4 max-w-3xl">
-<h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter">
-                                Authentic Kazakh Cuisine, Delivered to Your Door
-                            </h1>
-<h2 class="text-white/90 text-base sm:text-lg font-normal">
-                                Experience the rich flavors of traditional dishes like Kazy, Beshbarmak, and Kuyrdak, made with the freshest ingredients.
-                            </h2>
-</div>
-<a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary/90 transition-colors" href="#menu">
-<span class="truncate">View Menu</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Menu Section -->
-<section class="py-16 sm:py-24" id="menu">
-  <div class="container mx-auto px-4">
-    <h2 class="text-center text-[#181311] dark:text-[#f8f6f5] text-3xl font-bold tracking-tight pb-4">Our Menu</h2>
-    <p class="text-center text-stone-600 dark:text-stone-400 max-w-2xl mx-auto pb-8">Browse our selection of authentic dishes, all priced per kilogram. Add your favorites to the cart and order easily via WhatsApp.</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="product-list">
-      <!-- Товары будут добавляться через JS -->
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
+
+  <body class="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-200">
+    <!-- Header -->
+    <header class="relative bg-cover bg-center h-96" style="background-image: url('./header-bg.jpg')">
+      <div class="container mx-auto flex justify-between items-center p-6">
+        <h1 class="text-3xl font-bold text-white drop-shadow-lg">Restaurant Name</h1>
+        <nav class="space-x-4 text-white">
+          <a href="#hero" class="hover:underline">Главная</a>
+          <a href="#menu" class="hover:underline">Меню</a>
+          <a href="#delivery" class="hover:underline">Доставка</a>
+          <a href="#contacts" class="hover:underline">Контакты</a>
+        </nav>
+      </div>
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
+        <h2 class="text-4xl font-bold mb-4">Настоящая Казахская Кухня</h2>
+        <p class="text-lg max-w-lg">Попробуйте наши фирменные блюда из свежего мяса, доступные для заказа с доставкой.</p>
+        <a href="#menu" class="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-lg shadow-lg hover:bg-primary/90">Посмотреть меню</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="py-16 text-center">
+      <h2 class="text-3xl font-bold mb-4">Добро пожаловать в наш ресторан!</h2>
+      <p class="text-lg max-w-2xl mx-auto">У нас вы найдете вкуснейшие блюда казахской кухни, приготовленные с душой и традиционными технологиями.</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="py-16 bg-stone-100 dark:bg-stone-800" id="menu">
+      <div class="container mx-auto px-4">
+        <h2 class="text-center text-3xl font-bold mb-4">Меню</h2>
+        <p class="text-center text-stone-600 dark:text-stone-400 max-w-2xl mx-auto pb-8">
+          Все блюда приготовлены из свежего мяса. Цена указана за килограмм. Добавьте понравившиеся блюда в корзину и оформите заказ легко!
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="product-list">
+          <!-- Товары будут генерироваться через JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section id="delivery" class="py-16 text-center">
+      <h2 class="text-3xl font-semibold mb-6">Доставка</h2>
+      <p class="text-lg">Мы доставляем свежие блюда прямо к вам домой, в любой район города. Выберите удобное время и получите заказ с комфортом.</p>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="py-16 bg-stone-100 dark:bg-stone-800 text-center">
+      <h2 class="text-3xl font-semibold mb-4">Свяжитесь с нами</h2>
+      <p class="text-lg mb-6">Есть вопросы или хотите сделать заказ по телефону? Мы всегда на связи!</p>
+      <p><strong>Телефон:</strong> <a href="tel:+77064109931" class="text-blue-500">+7 706 410 99 31</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/77064109931" class="text-green-500">Написать в чат</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-stone-900 text-white">
+      <p>© 2024 Restaurant Name. Все права защищены.</p>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+      <div class="bg-white dark:bg-stone-900 p-6 rounded-lg shadow-md max-w-sm w-full">
+        <h2 class="text-xl font-semibold mb-4">Ваша корзина</h2>
+        <div id="cart-items" class="space-y-3 mb-4">
+          <!-- Позиции корзины -->
+        </div>
+        <p class="font-bold text-lg mb-4">Итого: <span id="total-price">0 ₸</span></p>
+
+        <h3 class="text-lg mb-2 font-semibold">Оформление заказа:</h3>
+        <input id="name" type="text" class="w-full mb-2 p-2 border rounded" placeholder="Ваше имя" />
+        <input id="phone" type="tel" class="w-full mb-2 p-2 border rounded" placeholder="Номер телефона" />
+        <input id="address" type="text" class="w-full mb-2 p-2 border rounded" placeholder="Адрес доставки" />
+        <input id="delivery-time" type="datetime-local" class="w-full mb-4 p-2 border rounded" />
+
+        <button onclick="checkout()" class="w-full bg-primary text-white p-2 rounded hover:bg-primary/90">Оформить заказ</button>
+        <button onclick="toggleCart()" class="w-full mt-2 bg-gray-200 dark:bg-gray-700 p-2 rounded">Закрыть</button>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- Корзина (модальное окно) -->
-<div id="cart-modal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-  <div class="bg-white dark:bg-stone-900 p-6 rounded-lg max-w-md w-full">
-    <h2 class="text-xl font-bold mb-4">Ваша корзина</h2>
-    <div id="cart-items" class="space-y-2 mb-4"></div>
-    <p class="text-lg font-bold mb-4">Итого: <span id="total-price">0 ₸</span></p>
-
-    <h3 class="text-lg mb-2 font-semibold">Оформление заказа:</h3>
-    <input id="name" type="text" class="w-full mb-2 p-2 border rounded" placeholder="Ваше имя">
-    <input id="phone" type="tel" class="w-full mb-2 p-2 border rounded" placeholder="Номер телефона">
-    <input id="address" type="text" class="w-full mb-2 p-2 border rounded" placeholder="Адрес доставки">
-    <input id="delivery-time" type="datetime-local" class="w-full mb-4 p-2 border rounded">
-    <button onclick="checkout()" class="w-full bg-primary text-white p-2 rounded hover:bg-primary/90">Оформить заказ</button>
-    <button onclick="toggleCart()" class="w-full mt-2 bg-gray-200 dark:bg-gray-700 p-2 rounded">Закрыть</button>
-  </div>
-</div>
-
-<!-- Floating Cart & Contact Buttons -->
-<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-  <!-- Cart Button -->
-  <button onclick="toggleCart()" class="relative flex items-center justify-center size-16 rounded-full bg-primary text-white shadow-lg hover:bg-primary/90 transition-transform hover:scale-110">
-    <span class="material-symbols-outlined text-3xl">shopping_bag</span>
-    <span id="cart-badge" class="absolute -top-1 -right-1 flex items-center justify-center size-6 rounded-full bg-white text-primary text-xs font-bold border-2 border-primary">0</span>
-  </button>
-
-  <!-- Contact Button -->
-  <div class="relative group">
-    <button class="flex items-center justify-center size-16 rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 transition-transform hover:scale-110">
-      <span class="material-symbols-outlined text-3xl">call</span>
-    </button>
-    <div class="hidden group-hover:block absolute bottom-20 right-0 space-y-2">
-      <a href="https://wa.me/77064109931" target="_blank" class="flex items-center justify-center size-12 rounded-full bg-green-500 text-white shadow hover:bg-green-600">
-        <span class="material-symbols-outlined text-xl">chat</span>
-      </a>
-      <a href="tel:+77064109931" class="flex items-center justify-center size-12 rounded-full bg-blue-500 text-white shadow hover:bg-blue-600">
-        <span class="material-symbols-outlined text-xl">phone</span>
-      </a>
+    <!-- Floating Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+      <!-- Cart Button -->
+      <button onclick="toggleCart()" class="relative flex items-center justify-center size-16 rounded-full bg-red-600 text-white shadow-lg hover:bg-red-700 transition-all">
+        <span class="material-symbols-outlined text-3xl">shopping_bag</span>
+        <span id="cart-badge" class="absolute -top-1 -right-1 size-6 flex items-center justify-center bg-white text-red-600 text-xs font-bold rounded-full border-2 border-red-600">0</span>
+      </button>
+      <!-- Contact Button -->
+      <button onclick="window.location.href='https://wa.me/77064109931'" class="flex items-center justify-center size-16 rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 transition-all">
+        <span class="material-symbols-outlined text-3xl">chat</span>
+      </button>
     </div>
-  </div>
-</div>
 
-<!-- Подключение JS -->
-<script src="./script.js"></script>
-<!-- Footer -->
-<footer class="bg-white dark:bg-stone-900/50 border-t border-stone-200 dark:border-stone-800">
-<div class="container mx-auto px-4 py-8">
-<div class="flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="text-center md:text-left">
-<p class="text-sm text-stone-600 dark:text-stone-400">© 2024 Kazakh Taste. All Rights Reserved.</p>
-<p class="text-sm text-stone-500 dark:text-stone-500">123 Nomad Ave, Astana, Kazakhstan</p>
-</div>
-<div class="flex items-center gap-4">
-<a class="text-stone-500 hover:text-primary transition-colors" href="#">
-<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
-</a>
-<a class="text-stone-500 hover:text-primary transition-colors" href="#">
-<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm0 1.623c-2.403 0-2.72.009-3.667.053-1.054.048-1.583.211-1.996.377A3.295 3.295 0 004.8 5.768a3.295 3.295 0 00-.833 1.258c-.166.413-.329.942-.377 1.996C3.633 9.42 3.623 9.738 3.623 12.148s.009 2.72.053 3.667c.048 1.054.211 1.583.377 1.996.176.442.42.82.748 1.148.327.327.706.572 1.148.748.413.166.942.329 1.996.377 1.05.048 1.37.058 3.82.058s2.77-.01 3.82-.058c1.054-.048 1.583-.211 1.996-.377.442-.176.82-.42 1.148-.748.327-.327.572-.706.748-1.148.166-.413.329-.942.377-1.996.043-1.05.053-1.37.053-3.82s-.01-2.77-.053-3.82c-.048-1.054-.211-1.583-.377-1.996a3.295 3.295 0 00-.748-1.148 3.295 3.295 0 00-1.148-.748c-.413-.166-.942-.329-1.996-.377C15.053 3.633 14.735 3.623 12.323 3.623z" fill-rule="evenodd"></path><path d="M12 8.118a3.882 3.882 0 100 7.764 3.882 3.882 0 000-7.764zM12 14.333A2.333 2.333 0 1112 9.667a2.333 2.333 0 010 4.666z"></path><path d="M16.848 7.152a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"></path></svg>
-</a>
-</div>
-</div>
-</div>
-</footer>
-</div>
-</body></html>
+    <!-- JS Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
