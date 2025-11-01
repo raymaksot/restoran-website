@@ -1,3 +1,48 @@
+/* Toast notification */
+#toast {
+	z-index: 1000;
+}
+.fade-in { opacity: 1 !important; transform: translateY(0) scale(1); transition: opacity .3s, transform .3s; }
+.fade-out { opacity: 0 !important; transform: translateY(20px) scale(.98); transition: opacity .4s, transform .4s; }
+
+/* Cart bounce animation */
+.animate-bounce-cart {
+	animation: bounceCart .4s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes bounceCart {
+	0% { transform: scale(1); }
+	40% { transform: scale(1.15); }
+	60% { transform: scale(0.95); }
+	100% { transform: scale(1); }
+}
+
+/* Cart panel slide-in/out */
+.cart-slide-in {
+	animation: cartSlideIn .4s cubic-bezier(.34,1.56,.64,1);
+}
+.cart-slide-out {
+	animation: cartSlideOut .4s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes cartSlideIn {
+	0% { transform: translateX(100%); opacity: 0; }
+	100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes cartSlideOut {
+	0% { transform: translateX(0); opacity: 1; }
+	100% { transform: translateX(100%); opacity: 0; }
+}
+
+/* Contact expand animation */
+#contact-expand a {
+	transition: transform .3s, opacity .3s;
+}
+#contact-expand .scale-90 { transform: scale(.9); opacity: 0; }
+#contact-expand .scale-100 { transform: scale(1); opacity: 1; }
+
+/* Contact label fade/slide */
+#contact-label {
+	transition: opacity .3s, transform .3s;
+}
 /* Custom styles for ресторан-website */
 
 .hero-bg {
