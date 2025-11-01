@@ -3,107 +3,221 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ресторан Казахской Кухни</title>
+    <title>Ресторан — Казахская кухня</title>
 
-    <!-- Styles -->
+    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="./style.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-200">
-    <!-- Header -->
-    <header class="relative bg-cover bg-center h-96" style="background-image: url('./header-bg.jpg')">
-      <div class="container mx-auto flex justify-between items-center p-6">
-        <h1 class="text-3xl font-bold text-white drop-shadow-lg">Restaurant Name</h1>
-        <nav class="space-x-4 text-white">
-          <a href="#hero" class="hover:underline">Главная</a>
-          <a href="#menu" class="hover:underline">Меню</a>
-          <a href="#delivery" class="hover:underline">Доставка</a>
-          <a href="#contacts" class="hover:underline">Контакты</a>
-        </nav>
-      </div>
-      <div class="absolute inset-0 bg-black opacity-40"></div>
-      <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
-        <h2 class="text-4xl font-bold mb-4">Настоящая Казахская Кухня</h2>
-        <p class="text-lg max-w-lg">Попробуйте наши фирменные блюда из свежего мяса, доступные для заказа с доставкой.</p>
-        <a href="#menu" class="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-lg shadow-lg hover:bg-primary/90">Посмотреть меню</a>
+  <body class="antialiased bg-gray-50 text-gray-800">
+    <header class="hero-bg relative overflow-hidden">
+      <div class="bg-gradient-to-r from-black/60 to-transparent absolute inset-0"></div>
+      <div class="container mx-auto px-6 py-20 relative z-10">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <img src="./beshbarmak.jpg" alt="Логотип" class="w-16 h-16 rounded-full object-cover border-2 border-white shadow-lg" />
+            <div>
+              <h1 class="text-white text-2xl font-extrabold">Ресторан «Дастархан»</h1>
+              <p class="text-sm text-gray-200">Традиционная казахская кухня — свежо и вкусно</p>
+            </div>
+          </div>
+
+          <nav class="hidden md:flex gap-6 text-white">
+            <a href="#hero" class="hover:underline">Главная</a>
+            <a href="#about" class="hover:underline">О нас</a>
+            <a href="#menu" class="hover:underline">Меню</a>
+            <a href="#reviews" class="hover:underline">Отзывы</a>
+            <a href="#faq" class="hover:underline">FAQ</a>
+            <a href="#contacts" class="hover:underline">Контакты</a>
+          </nav>
+        </div>
+
+        <div class="mt-12 max-w-3xl">
+          <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">Настоящая казахская кухня с доставкой по городу</h2>
+          <p class="mt-4 text-gray-200">Попробуйте сочные мясные блюда, фирменные салаты и десерты. Быстрая доставка и удобная оплата.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="#menu" class="btn-primary">Посмотреть меню</a>
+            <a href="#contacts" class="btn-outline">Связаться с нами</a>
+          </div>
+        </div>
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="py-16 text-center">
-      <h2 class="text-3xl font-bold mb-4">Добро пожаловать в наш ресторан!</h2>
-      <p class="text-lg max-w-2xl mx-auto">У нас вы найдете вкуснейшие блюда казахской кухни, приготовленные с душой и традиционными технологиями.</p>
-    </section>
+    <main>
+      <!-- About -->
+      <section id="about" class="container mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-3xl font-bold mb-4">О нас</h3>
+            <p class="text-gray-700">Мы — семейный ресторан, сохраняющий традиции казахской кухни. Используем только свежее мясо и натуральные ингредиенты. Готовим с любовью и доставляем быстро.</p>
+            <ul class="mt-4 space-y-2 text-gray-600">
+              <li>• Натуральные продукты</li>
+              <li>• Быстрая доставка</li>
+              <li>• Приготовлено по рецептам предков</li>
+            </ul>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <img src="./kuyrdak.jpg" alt="О нас изображение" class="w-full h-64 object-cover" />
+          </div>
+        </div>
+      </section>
 
-    <!-- Menu Section -->
-    <section class="py-16 bg-stone-100 dark:bg-stone-800" id="menu">
-      <div class="container mx-auto px-4">
-        <h2 class="text-center text-3xl font-bold mb-4">Меню</h2>
-        <p class="text-center text-stone-600 dark:text-stone-400 max-w-2xl mx-auto pb-8">
-          Все блюда приготовлены из свежего мяса. Цена указана за килограмм. Добавьте понравившиеся блюда в корзину и оформите заказ легко!
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="product-list">
-          <!-- Товары будут генерироваться через JS -->
+      <!-- Benefits -->
+      <section class="bg-white py-12">
+        <div class="container mx-auto px-6">
+          <h3 class="text-2xl font-bold text-center mb-6">Почему выбирают нас</h3>
+          <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="p-6 bg-gray-50 rounded-lg shadow-sm text-center">
+              <div class="text-3xl mb-3">🥇</div>
+              <h4 class="font-semibold">Качество</h4>
+              <p class="text-sm text-gray-600">Свежие продукты и опытные повара.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-lg shadow-sm text-center">
+              <div class="text-3xl mb-3">🚚</div>
+              <h4 class="font-semibold">Доставка</h4>
+              <p class="text-sm text-gray-600">Быстро и аккуратно до двери.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-lg shadow-sm text-center">
+              <div class="text-3xl mb-3">💳</div>
+              <h4 class="font-semibold">Удобство</h4>
+              <p class="text-sm text-gray-600">Оплата наличными или картой.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-lg shadow-sm text-center">
+              <div class="text-3xl mb-3">🌿</div>
+              <h4 class="font-semibold">Традиции</h4>
+              <p class="text-sm text-gray-600">Рецепты от семьи шефа.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu with categories -->
+      <section id="menu" class="container mx-auto px-6 py-16">
+        <h3 class="text-3xl font-bold text-center mb-4">Полное меню</h3>
+        <p class="text-center text-gray-600 mb-8">Выберите категорию и добавьте блюда в корзину — оплата при доставке.</p>
+
+        <div class="max-w-4xl mx-auto mb-6">
+          <div class="flex flex-wrap justify-center gap-3" id="category-tabs" role="tablist">
+            <button class="category-tab active" data-cat="all">Все</button>
+            <button class="category-tab" data-cat="meat">Мясо</button>
+            <button class="category-tab" data-cat="hot">Горячее</button>
+            <button class="category-tab" data-cat="salads">Салаты</button>
+            <button class="category-tab" data-cat="snacks">Закуски</button>
+            <button class="category-tab" data-cat="desserts">Десерты</button>
+          </div>
+        </div>
+
+        <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </section>
+
+      <!-- Reviews -->
+      <section id="reviews" class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6">
+          <h3 class="text-2xl font-bold text-center mb-6">Отзывы наших гостей</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <blockquote class="p-6 bg-white rounded-lg shadow">«Лучшее мясо в городе — рекомендую!»<footer class="mt-3 text-sm text-gray-600">— Айжан</footer></blockquote>
+            <blockquote class="p-6 bg-white rounded-lg shadow">«Быстрая доставка, всё горячее и вкусное.»<footer class="mt-3 text-sm text-gray-600">— Руслан</footer></blockquote>
+            <blockquote class="p-6 bg-white rounded-lg shadow">«Аутентичные рецепты, атмосфера дома.»<footer class="mt-3 text-sm text-gray-600">— Гульнар</footer></blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="container mx-auto px-6 py-12">
+        <h3 class="text-2xl font-bold text-center mb-6">Вопросы и ответы</h3>
+        <div class="max-w-3xl mx-auto space-y-3" id="faq-list">
+          <details class="p-4 bg-white rounded shadow"><summary class="font-semibold">Доставляете ли вы вечером?</summary><p class="mt-2 text-gray-600">Да, работаем до 23:00.</p></details>
+          <details class="p-4 bg-white rounded shadow"><summary class="font-semibold">Можно ли оплатить картой?</summary><p class="mt-2 text-gray-600">Да, принимаем карты при доставке.</p></details>
+          <details class="p-4 bg-white rounded shadow"><summary class="font-semibold">Есть ли упаковка для больших заказов?</summary><p class="mt-2 text-gray-600">Да, используем качественную упаковку.</p></details>
+          <details class="p-4 bg-white rounded shadow"><summary class="font-semibold">Можно ли заказать на праздник?</summary><p class="mt-2 text-gray-600">Да, оформляйте заказ заранее по телефону.</p></details>
+          <details class="p-4 bg-white rounded shadow"><summary class="font-semibold">Есть ли вегетарианские блюда?</summary><p class="mt-2 text-gray-600">Есть несколько салатов и закусок.</p></details>
+        </div>
+      </section>
+
+      <!-- Order form (in cart modal but also an anchor) -->
+      <section id="contacts" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+          <h3 class="text-2xl font-bold text-center mb-6">Оформить заказ</h3>
+          <div class="max-w-2xl mx-auto bg-gray-50 p-6 rounded-lg shadow">
+            <form id="order-form" class="space-y-3">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <input id="cust-name" name="name" required placeholder="Имя" class="p-2 border rounded" />
+                <input id="cust-phone" name="phone" required placeholder="Телефон" class="p-2 border rounded" />
+              </div>
+              <input id="cust-address" name="address" placeholder="Адрес доставки" class="w-full p-2 border rounded" />
+              <input id="cust-datetime" name="datetime" type="datetime-local" class="w-full p-2 border rounded" />
+              <textarea id="cust-note" name="note" placeholder="Комментарий" class="w-full p-2 border rounded"></textarea>
+              <div class="flex gap-3">
+                <button type="button" id="send-order" class="btn-primary flex-1">Отправить заказ в WhatsApp</button>
+                <button type="button" id="open-cart" class="btn-outline">Открыть корзину</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-200 py-8">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-6">
+        <div>
+          <h4 class="font-bold mb-2">Ресторан «Дастархан»</h4>
+          <p class="text-sm">Адрес: ул. Астана, 12<br/>Часы работы: 10:00 — 23:00</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2">Ссылки</h4>
+          <ul class="text-sm space-y-1">
+            <li><a href="#menu" class="hover:underline">Меню</a></li>
+            <li><a href="#reviews" class="hover:underline">Отзывы</a></li>
+            <li><a href="#faq" class="hover:underline">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2">Контакты</h4>
+          <p class="text-sm">Тел: <a href="tel:+77064109931" class="text-green-400">+7 706 410 99 31</a><br/>WhatsApp: <a href="https://wa.me/77064109931" class="text-green-400">Написать</a></p>
         </div>
       </div>
-    </section>
-
-    <!-- Delivery Section -->
-    <section id="delivery" class="py-16 text-center">
-      <h2 class="text-3xl font-semibold mb-6">Доставка</h2>
-      <p class="text-lg">Мы доставляем свежие блюда прямо к вам домой, в любой район города. Выберите удобное время и получите заказ с комфортом.</p>
-    </section>
-
-    <!-- Contacts Section -->
-    <section id="contacts" class="py-16 bg-stone-100 dark:bg-stone-800 text-center">
-      <h2 class="text-3xl font-semibold mb-4">Свяжитесь с нами</h2>
-      <p class="text-lg mb-6">Есть вопросы или хотите сделать заказ по телефону? Мы всегда на связи!</p>
-      <p><strong>Телефон:</strong> <a href="tel:+77064109931" class="text-blue-500">+7 706 410 99 31</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/77064109931" class="text-green-500">Написать в чат</a></p>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center py-4 bg-stone-900 text-white">
-      <p>© 2024 Restaurant Name. Все права защищены.</p>
+      <div class="text-center text-sm mt-6">© 2025 Ресторан «Дастархан»</div>
     </footer>
 
-    <!-- Cart Modal -->
-    <div id="cart-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-      <div class="bg-white dark:bg-stone-900 p-6 rounded-lg shadow-md max-w-sm w-full">
-        <h2 class="text-xl font-semibold mb-4">Ваша корзина</h2>
-        <div id="cart-items" class="space-y-3 mb-4">
-          <!-- Позиции корзины -->
-        </div>
-        <p class="font-bold text-lg mb-4">Итого: <span id="total-price">0 ₸</span></p>
+    <!-- Floating Cart -->
+    <button id="cart-button" class="fixed right-6 bottom-6 z-50 bg-red-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center">
+      <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+      <span id="cart-count" class="absolute -top-1 -right-1 bg-white text-red-600 text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">0</span>
+    </button>
 
-        <h3 class="text-lg mb-2 font-semibold">Оформление заказа:</h3>
-        <input id="name" type="text" class="w-full mb-2 p-2 border rounded" placeholder="Ваше имя" />
-        <input id="phone" type="tel" class="w-full mb-2 p-2 border rounded" placeholder="Номер телефона" />
-        <input id="address" type="text" class="w-full mb-2 p-2 border rounded" placeholder="Адрес доставки" />
-        <input id="delivery-time" type="datetime-local" class="w-full mb-4 p-2 border rounded" />
-
-        <button onclick="checkout()" class="w-full bg-primary text-white p-2 rounded hover:bg-primary/90">Оформить заказ</button>
-        <button onclick="toggleCart()" class="w-full mt-2 bg-gray-200 dark:bg-gray-700 p-2 rounded">Закрыть</button>
+    <!-- Floating Contact -->
+    <div id="contact-fab" class="fixed right-6 bottom-24 z-50 flex flex-col items-end gap-3">
+      <button id="contact-main" class="bg-green-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center">
+        <span class="material-symbols-outlined">chat</span>
+      </button>
+      <div id="contact-expand" class="hidden flex flex-col gap-2 items-end">
+        <a href="tel:+77064109931" class="p-3 bg-blue-600 text-white rounded shadow">Позвонить</a>
+        <a id="wa-chat" href="https://wa.me/77064109931" target="_blank" class="p-3 bg-green-500 text-white rounded shadow">WhatsApp</a>
       </div>
     </div>
 
-    <!-- Floating Buttons -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-      <!-- Cart Button -->
-      <button onclick="toggleCart()" class="relative flex items-center justify-center size-16 rounded-full bg-red-600 text-white shadow-lg hover:bg-red-700 transition-all">
-        <span class="material-symbols-outlined text-3xl">shopping_bag</span>
-        <span id="cart-badge" class="absolute -top-1 -right-1 size-6 flex items-center justify-center bg-white text-red-600 text-xs font-bold rounded-full border-2 border-red-600">0</span>
-      </button>
-      <!-- Contact Button -->
-      <button onclick="window.location.href='https://wa.me/77064109931'" class="flex items-center justify-center size-16 rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 transition-all">
-        <span class="material-symbols-outlined text-3xl">chat</span>
-      </button>
-    </div>
+    <!-- Cart Sidebar -->
+    <aside id="cart-panel" class="fixed right-0 top-0 h-full w-full sm:w-96 bg-white shadow-lg transform translate-x-full transition-transform z-50">
+      <div class="p-6 h-full flex flex-col">
+        <div class="flex items-center justify-between mb-4">
+          <h4 class="text-lg font-bold">Ваша корзина</h4>
+          <button id="close-cart" class="text-gray-600">✕</button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-auto space-y-3"></div>
+        <div class="mt-4">
+          <div class="flex justify-between items-center mb-3"><span class="font-semibold">Итого</span><span id="cart-total">0 ₸</span></div>
+          <div class="flex gap-3">
+            <button id="checkout-btn" class="btn-primary flex-1">Оформить в WhatsApp</button>
+            <button id="clear-cart" class="btn-outline">Очистить</button>
+          </div>
+        </div>
+      </div>
+    </aside>
 
-    <!-- JS Script -->
     <script src="./script.js"></script>
   </body>
 </html>

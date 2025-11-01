@@ -1,1 +1,63 @@
-"" 
+/* Custom styles for ресторан-website */
+
+.hero-bg {
+	background-image: url('./beshbarmak.jpg');
+	background-size: cover;
+	background-position: center;
+	min-height: 420px;
+}
+
+/* Buttons */
+.btn-primary {
+	background: linear-gradient(90deg,#ef4444,#f97316);
+	color: white;
+	padding: .6rem 1rem;
+	border-radius: .5rem;
+	font-weight: 600;
+	box-shadow: 0 6px 18px rgba(249,115,22,.18);
+}
+.btn-primary:hover { transform: translateY(-2px); }
+
+.btn-outline {
+	background: transparent;
+	border: 1px solid rgba(0,0,0,.08);
+	padding: .5rem .9rem;
+	border-radius: .5rem;
+}
+
+/* Category tabs */
+.category-tab {
+	padding: .5rem .9rem;
+	background: white;
+	border-radius: 999px;
+	border: 1px solid rgba(0,0,0,.06);
+	font-weight: 600;
+	cursor: pointer;
+}
+.category-tab.active {
+	background: #111827;
+	color: white;
+	box-shadow: 0 6px 18px rgba(17,24,39,.12);
+}
+
+/* Product card animations */
+.product-card { transition: transform .25s ease, box-shadow .25s ease, opacity .3s ease; }
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(2,6,23,.12); }
+
+/* Contact FAB expansion */
+#contact-expand a { transform: translateY(8px); transition: transform .2s ease, opacity .2s ease; }
+#contact-expand.show a { transform: translateY(0); opacity: 1; }
+
+/* Cart sidebar transition handled via Tailwind utility + translate-x-full class */
+
+/* Small helpers */
+.muted { color: #6b7280; }
+
+@media (max-width: 640px) {
+	.hero-bg { min-height: 360px; }
+}
+
+/* Fade-in on scroll basic (used via JS adding .reveal) */
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
