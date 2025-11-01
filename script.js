@@ -4,10 +4,10 @@ const products = [
   { id: 2, name: 'Шашлык', category: 'meat', price: 16000, img: './shashlik.jpg' },
   { id: 3, name: 'Қуырдақ', category: 'hot', price: 14000, img: './kuyrdak.jpg' },
   { id: 4, name: 'Қазы', category: 'meat', price: 18000, img: './kazy.jpg' },
-  { id: 5, name: 'Манты', category: 'hot', price: 12000, img: './shashlik.jpg' },
-  { id: 6, name: 'Салат овощной', category: 'salads', price: 4500, img: './beshbarmak.jpg' },
-  { id: 7, name: 'Закуска сырная', category: 'snacks', price: 3500, img: './kazy.jpg' },
-  { id: 8, name: 'Кунжутный десерт', category: 'desserts', price: 3000, img: './shashlik.jpg' }
+  { id: 5, name: 'Манты', category: 'hot', price: 12000, img: './manty.jpeg' },
+  { id: 6, name: 'Салат овощной', category: 'salads', price: 4500, img: './salat.jpg' },
+  { id: 7, name: 'Закуска сырная', category: 'snacks', price: 3500, img: './zakuska.jpg' },
+  { id: 8, name: 'Кунжутный десерт', category: 'desserts', price: 3000, img: './kunzhut.jpg' }
 ];
 
 const WA_PHONE = '77064109931';
