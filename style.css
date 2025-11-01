@@ -11,10 +11,43 @@
 }
 @keyframes bounceCart {
 	0% { transform: scale(1); }
-	40% { transform: scale(1.15); }
+	40% { transform: scale(1.18); }
 	60% { transform: scale(0.95); }
 	100% { transform: scale(1); }
 }
+
+/* Cart icon and badge size */
+#cart-button {
+	width: 5rem !important;
+	height: 5rem !important;
+	bottom: 6rem !important;
+}
+#cart-count {
+	width: 2rem !important;
+	height: 2rem !important;
+	font-size: 1.1rem !important;
+	top: -0.5rem !important;
+	right: -0.5rem !important;
+}
+
+/* Contact label animation */
+#contact-label {
+	opacity: 0;
+	transform: translateX(1.5rem);
+	transition: opacity .35s, transform .35s;
+}
+#contact-main:hover + #contact-label,
+.group:hover #contact-label {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+/* Contact expand animation */
+#contact-expand a, #contact-close {
+	transition: transform .3s, opacity .3s;
+}
+#contact-expand .scale-90 { transform: scale(.9); opacity: 0; }
+#contact-expand .scale-100 { transform: scale(1); opacity: 1; }
 
 /* Cart panel slide-in/out */
 .cart-slide-in {

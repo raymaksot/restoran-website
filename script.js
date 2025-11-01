@@ -223,32 +223,39 @@ document.getElementById('checkout-btn').addEventListener('click', () => { doChec
 const contactMain = document.getElementById('contact-main');
 const contactExpand = document.getElementById('contact-expand');
 const contactLabel = document.getElementById('contact-label');
+const contactClose = document.getElementById('contact-close');
 
+// Плавное появление текста при наведении
 contactMain.addEventListener('mouseenter', () => {
-  contactLabel.classList.add('opacity-100', 'translate-x-0');
+  contactLabel.style.opacity = '1';
+  contactLabel.style.transform = 'translateX(0)';
 });
 contactMain.addEventListener('mouseleave', () => {
-  contactLabel.classList.remove('opacity-100', 'translate-x-0');
+  contactLabel.style.opacity = '0';
+  contactLabel.style.transform = 'translateX(1.5rem)';
 });
 
+// Открытие/закрытие панели контактов
 contactMain.addEventListener('click', () => {
   if (contactExpand.classList.contains('hidden')) {
     contactExpand.classList.remove('hidden');
     setTimeout(() => {
-      contactExpand.querySelectorAll('a').forEach((btn, i) => {
+      contactExpand.querySelectorAll('a, button').forEach((btn, i) => {
         btn.classList.remove('scale-90', 'opacity-0');
         btn.classList.add('scale-100', 'opacity-100');
       });
     }, 50);
-  } else {
-    contactExpand.querySelectorAll('a').forEach((btn, i) => {
-      btn.classList.remove('scale-100', 'opacity-100');
-      btn.classList.add('scale-90', 'opacity-0');
-    });
-    setTimeout(() => {
-      contactExpand.classList.add('hidden');
-    }, 350);
   }
+});
+
+contactClose.addEventListener('click', () => {
+  contactExpand.querySelectorAll('a, button').forEach((btn, i) => {
+    btn.classList.remove('scale-100', 'opacity-100');
+    btn.classList.add('scale-90', 'opacity-0');
+  });
+  setTimeout(() => {
+    contactExpand.classList.add('hidden');
+  }, 350);
 });
 
 // Reveal on scroll
